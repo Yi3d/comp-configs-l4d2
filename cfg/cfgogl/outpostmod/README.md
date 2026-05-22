@@ -20,7 +20,7 @@ OutpostMod deviates in the following ways:
   - It's possible to bunny hop again as anything but the Tank, it is extremely difficult due to tickrate
   - Anti-baiter exists in 4v4s, 3v3s, and 2v2s, to prevent stalling across all modes
   - There are minor map modifications to typically played competitive custom maps
-    - Dead By Dawn (Static witch spawn on chapter 1)
+    - Dead Before Dawn (Static witch spawn on chapter 1)
     - Diescraper (Tanks can only spawn beyond 55% on chapter 1)
   - There is several custom map configurations, usually ports to other varations of maps
     - The Dark Parish
