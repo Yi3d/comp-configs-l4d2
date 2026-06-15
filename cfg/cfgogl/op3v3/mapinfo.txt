@@ -3032,7 +3032,69 @@
 		"start_extra_dist"	"150.000000"
 		"end_dist"			"150.000000"
 	}
-	
+//=======================================================================
+//=============== Dead Center 2025 死中心 2025
+	"dc2025_1"
+	{
+		"ItemLimits"
+		{
+			"pain_pills"	"3"
+		}
+	}
+	"dc2025_2"
+	{
+		"max_distance"		"700"
+		"tank_ban_flow"
+		{
+			"Parking"
+			{
+				"min"		"72"
+				"max"		"100"
+			}
+		}
+		"ItemLimits"
+		{
+			"pain_pills"	"3"
+		}
+	}	
+	"dc2025_3"
+	{
+		"tank_ban_flow"
+		{
+			"Event spawn"
+			{
+				"min"		"72"
+				"max"		"100"
+			}
+		}
+		"ItemLimits"
+		{
+			"pain_pills"	"3"
+		}
+	}	
+	"dc2025_4"
+	{
+		"max_distance"		"600"
+		"ItemLimits"
+		{
+			"pain_pills"	"4"
+		}
+		"witch_ban_flow"
+		{
+			"Early"
+			{
+				"min"		"0"
+				"max"		"30"
+			}
+		}
+	}
+	"dc2025_5"
+	{
+		"ItemLimits"
+		{
+			"pain_pills" "6"
+ 		}
+	}
 //-------- ↓↓↓ you can add custom info here ↓↓↓
 
 
