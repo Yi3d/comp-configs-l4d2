@@ -21,6 +21,7 @@ new Handle:hCvarPermanentHealthProportion;
 new Handle:hCvarPainPillsBonus;
 new Handle:hCvarPillsHpFactor;
 new Handle:hCvarPillsMaxBonus;
+new Handle:hCvarIsStaticPillBonus;
 // new Handle:hCvarTiebreakerBonus;
 
 new Handle:hCvarValveSurvivalBonus;
@@ -74,7 +75,9 @@ public OnPluginStart()
 	hCvarBonusPerSurvivorMultiplier = CreateConVar("sm2_bonus_per_survivor_multiplier", "0.5", "Total Survivor Bonus = this * Number of Survivors * Map Distance");
 	hCvarPermanentHealthProportion = CreateConVar("sm2_permament_health_proportion", "0.75", "Permanent Health Bonus = this * Map Bonus; rest goes for Temporary Health Bonus");
 	hCvarPainPillsBonus = CreateConVar("sm2_painpills_bonus", "15", "How much one pain pill bottle is worth");
-
+	hCvarPillsHpFactor = CreateConVar("sm2_pills_hp_factor", "6.0", "Unused pills HP worth = map bonus HP value / this");
+	hCvarPillsMaxBonus = CreateConVar("sm2_pills_max_bonus", "30", "Unused pills cannot be worth more than this");
+	hCvarIsStaticPillBonus = CreateConVar("sm2_static_pill_bonus_enable", "0", "If the pill bonus should be replaced with a static value", FCVAR_NONE, true, 0.0, true, 1.0);
 	
 	hCvarValveSurvivalBonus = FindConVar("vs_survival_bonus");
 	hCvarValveTieBreaker = FindConVar("vs_tiebreak_bonus");
@@ -128,7 +131,10 @@ public OnConfigsExecuted()
 	fMapTempHealthBonus = iTeamSize * 100/* HP */ / fPermHealthProportion * fTempHealthProportion;
 	fPermHpWorth = fMapBonus / iTeamSize / 100 * fPermHealthProportion;
 	fTempHpWorth = fMapBonus * fTempHealthProportion / fMapTempHealthBonus; // this should be almost equal to the perm hp worth, but for accuracy we'll keep it separate
-	iPillWorth = GetConVarInt(hCvarPainPillsBonus);
+	if (GetConVarFloat(hCvarIsStaticPillBonus) == 0.0)
+		iPillWorth = L4D2Util_Clamp(RoundToNearest(50 * (fPermHpWorth / GetConVarFloat(hCvarPillsHpFactor)) / 5) * 5, 5, GetConVarInt(hCvarPillsMaxBonus)); // make it pretty
+	else
+		iPillWorth = GetConVarInt(hCvarPainPillsBonus);
 	//iPillWorth = L4D2Util_Clamp(RoundToNearest(50 * (fPermHpWorth / GetConVarFloat(hCvarPillsHpFactor)) / 5) * 5, 5, GetConVarInt(hCvarPillsMaxBonus)); // make it pretty
 #if SM2_DEBUG
 	PrintToChatAll("\x01Map health bonus: \x05%.1f\x01, temp health bonus: \x05%.1f\x01, perm hp worth: \x03%.1f\x01, temp hp worth: \x03%.1f\x01, pill worth: \x03%i\x01", fMapBonus, fMapTempHealthBonus, fPermHpWorth, fTempHpWorth, iPillWorth);
