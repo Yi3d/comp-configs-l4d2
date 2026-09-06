@@ -2505,6 +2505,14 @@
 		"start_dist"		"100.000000"
 		"start_extra_dist"	"300.000000"
 		"end_dist"			"350.000000"
+		"tank_ban_flow"
+		{
+			"2nd Event Door"
+			{
+				"min"		"65"
+				"max"		"78"
+			}
+		}
 	}
 	"uz_town"
 	{
@@ -3115,8 +3123,6 @@
 			"pain_pills" "6"
  		}
 	}
-
-
 
 
 
