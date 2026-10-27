@@ -1,0 +1,123 @@
+"MatchModes"
+{
+	"4v4 Configs"
+	{
+		"outpostmod"
+		{
+			"name" "OutpostMod 1.3.2"
+		}
+		"zonemod"
+		{
+			"name" "ZoneMod 2.9.2b"
+		}
+		"neomod"
+		{
+			"name" "NeoMod Tourney 0.4a"
+		}
+		"pmelite"
+		{
+			"name" "Promod Elite 1.1"
+		}
+		"deadman"
+		{
+			"name" "Deadman 5.0.3"
+		}
+		"nextmod"
+		{
+			"name" "NextMod 1.0.5"
+		}
+		"acemodrv"
+		{
+			"name" "Acemod RV 1.3"
+		}
+		"eq"
+		{
+			"name" "Equilibrium 3.0c"
+		}
+		"apex"
+		{
+			"name" "Apex 1.1.2"
+		}
+		"zonehunters"
+		{
+			"name" "ZoneHunters 2.9"
+		}
+	}
+	"3v3 Configs"
+	{
+		"op3v3"
+		{
+			"name" "3v3 OutpostMod"
+		}
+		"zm3v3"
+		{
+			"name" "3v3 Zonemod"
+		}
+		"nextmod3v3"
+		{
+			"name" "3v3 NextMod"
+		}
+		"amrv3v3"
+		{
+			"name" "3v3 Acemod RV"
+		}
+		"eq3v3"
+		{
+			"name" "3v3 EQ"
+		}
+		"zh3v3"
+		{
+			"name" "3v3 ZoneHunters"
+		}
+	}
+	"2v2 Configs"
+	{
+		"op2v2"
+		{
+			"name" "2v2 OutpostMod"
+		}
+		"zm2v2"
+		{
+			"name" "2v2 Zonemod"
+		}
+		"nextmod2v2"
+		{
+			"name" "2v2 NextMod"
+		}
+		"amrv2v2"
+		{
+			"name" "2v2 Acemod RV"
+		}
+		"eq2v2"
+		{
+			"name" "2v2 EQ"
+		}
+		"zh2v2"
+		{
+			"name" "2v2 ZoneHunters"
+		}
+	}
+	"1v1 Configs"
+	{
+		"zm1v1"
+		{
+			"name" "1v1 ZoneMod"
+		}
+		"nextmod1v1"
+		{
+			"name" "1v1 NextMod"
+		}
+		"amrv1v1"
+		{
+			"name" "1v1 Acemod RV"
+		}
+		"eq1v1"
+		{
+			"name" "1v1 EQ"
+		}
+		"zh1v1"
+		{
+			"name" "1v1 ZoneHunters"
+		}
+	}
+}
